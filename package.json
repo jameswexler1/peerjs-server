@@ -5,6 +5,6 @@
     "peer": "^1.0.1"
   },
   "scripts": {
-    "start": "peer --port $PORT --key peerjs --path /peerjs"
+    "start": "node server.js"
   }
 }

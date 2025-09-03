@@ -1,10 +1,9 @@
-{
-  "name": "peerjs-server",
-  "version": "1.0.0",
-  "dependencies": {
-    "peer": "^1.0.1"
-  },
-  "scripts": {
-    "start": "node server.js"
-  }
-}
+const { PeerServer } = require("peer");
+
+const server = PeerServer({
+  port: process.env.PORT || 9000, // Use Render's $PORT env var
+  path: "/peerjs",
+  key: "peerjs"
+});
+
+console.log("PeerJS Server running on port", process.env.PORT || 9000);
